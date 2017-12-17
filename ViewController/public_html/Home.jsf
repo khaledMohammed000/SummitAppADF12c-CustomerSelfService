@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Home.jsf" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:panelGridLayout id="pgl1">
                 <af:gridRow height="50px" id="gr2">
@@ -16,6 +17,107 @@
                                 <af:panelSplitter orientation="horizontal" splitterPosition="250" id="ps1">
                                     <f:facet name="first">
                                         <!-- Left -->
+                                        <af:panelHeader text="Customer Information" id="ph1">
+                                            <f:facet name="context"/>
+                                            <f:facet name="toolbar"/>
+                                            <f:facet name="menuBar"/>
+                                            <f:facet name="legend"/>
+                                            <f:facet name="info"/>
+                                            <af:panelFormLayout id="pfl1">
+                                                <af:inputText value="#{bindings.Id.inputValue}"
+                                                              label="#{bindings.Id.hints.label}"
+                                                              required="#{bindings.Id.hints.mandatory}" readOnly="true"
+                                                              columns="#{bindings.Id.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Id.hints.precision}"
+                                                              shortDesc="#{bindings.Id.hints.tooltip}" id="it1">
+                                                    <f:validator binding="#{bindings.Id.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.Id.format}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.Name.inputValue}"
+                                                              label="#{bindings.Name.hints.label}"
+                                                              required="#{bindings.Name.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.Name.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Name.hints.precision}"
+                                                              shortDesc="#{bindings.Name.hints.tooltip}" id="it2">
+                                                    <f:validator binding="#{bindings.Name.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.Phone.inputValue}"
+                                                              label="#{bindings.Phone.hints.label}"
+                                                              required="#{bindings.Phone.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.Phone.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Phone.hints.precision}"
+                                                              shortDesc="#{bindings.Phone.hints.tooltip}" id="it3">
+                                                    <f:validator binding="#{bindings.Phone.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.Address.inputValue}"
+                                                              label="#{bindings.Address.hints.label}"
+                                                              required="#{bindings.Address.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.Address.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Address.hints.precision}"
+                                                              shortDesc="#{bindings.Address.hints.tooltip}" id="it4">
+                                                    <f:validator binding="#{bindings.Address.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.City.inputValue}"
+                                                              label="#{bindings.City.hints.label}"
+                                                              required="#{bindings.City.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.City.hints.displayWidth}"
+                                                              maximumLength="#{bindings.City.hints.precision}"
+                                                              shortDesc="#{bindings.City.hints.tooltip}" id="it5">
+                                                    <f:validator binding="#{bindings.City.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.State.inputValue}"
+                                                              label="#{bindings.State.hints.label}"
+                                                              required="#{bindings.State.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.State.hints.displayWidth}"
+                                                              maximumLength="#{bindings.State.hints.precision}"
+                                                              shortDesc="#{bindings.State.hints.tooltip}" id="it6">
+                                                    <f:validator binding="#{bindings.State.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.CountryId.inputValue}"
+                                                              label="#{bindings.CountryId.hints.label}"
+                                                              required="#{bindings.CountryId.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.CountryId.hints.displayWidth}"
+                                                              maximumLength="#{bindings.CountryId.hints.precision}"
+                                                              shortDesc="#{bindings.CountryId.hints.tooltip}" id="it7">
+                                                    <f:validator binding="#{bindings.CountryId.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CountryId.format}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.ZipCode.inputValue}"
+                                                              label="#{bindings.ZipCode.hints.label}"
+                                                              required="#{bindings.ZipCode.hints.mandatory}"
+                                                              readOnly="true"
+                                                              columns="#{bindings.ZipCode.hints.displayWidth}"
+                                                              maximumLength="#{bindings.ZipCode.hints.precision}"
+                                                              shortDesc="#{bindings.ZipCode.hints.tooltip}" id="it8">
+                                                    <f:validator binding="#{bindings.ZipCode.validator}"/>
+                                                </af:inputText>
+                                                <f:facet name="footer">
+                                                    <af:panelGroupLayout layout="horizontal" id="pgl3">
+                                                        <af:button actionListener="#{bindings.First.execute}"
+                                                                   text="First" disabled="#{!bindings.First.enabled}"
+                                                                   partialSubmit="true" id="b1"/>
+                                                        <af:button actionListener="#{bindings.Previous.execute}"
+                                                                   text="Previous"
+                                                                   disabled="#{!bindings.Previous.enabled}"
+                                                                   partialSubmit="true" id="b2"/>
+                                                        <af:button actionListener="#{bindings.Next.execute}" text="Next"
+                                                                   disabled="#{!bindings.Next.enabled}"
+                                                                   partialSubmit="true" id="b3"/>
+                                                        <af:button actionListener="#{bindings.Last.execute}" text="Last"
+                                                                   disabled="#{!bindings.Last.enabled}"
+                                                                   partialSubmit="true" id="b4"/>
+                                                    </af:panelGroupLayout>
+                                                </f:facet>
+                                            </af:panelFormLayout>
+                                        </af:panelHeader>
                                     </f:facet>
                                     <f:facet name="second">
                                         <af:decorativeBox theme="medium" id="db1">
@@ -27,11 +129,179 @@
                                                         <f:facet name="first">
                                                             <af:panelBox text="Orders" id="pb1">
                                                                 <f:facet name="toolbar"/>
+                                                                <af:table value="#{bindings.OrdersForCustomer.collectionModel}"
+                                                                          var="row"
+                                                                          rows="#{bindings.OrdersForCustomer.rangeSize}"
+                                                                          emptyText="#{bindings.OrdersForCustomer.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                          rowBandingInterval="0"
+                                                                          selectedRowKeys="#{bindings.OrdersForCustomer.collectionModel.selectedRow}"
+                                                                          selectionListener="#{bindings.OrdersForCustomer.collectionModel.makeCurrent}"
+                                                                          rowSelection="single"
+                                                                          fetchSize="#{bindings.OrdersForCustomer.rangeSize}"
+                                                                          id="t1" columnStretching="last">
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.Id.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.Id.label}"
+                                                                               id="c1">
+                                                                        <af:outputText value="#{row.Id}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.Id.tooltip}"
+                                                                                       id="ot1">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.OrdersForCustomer.hints.Id.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.DateOrdered.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.DateOrdered.label}"
+                                                                               id="c2">
+                                                                        <af:outputText value="#{row.DateOrdered}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.DateOrdered.tooltip}"
+                                                                                       id="ot2">
+                                                                            <af:convertDateTime pattern="#{bindings.OrdersForCustomer.hints.DateOrdered.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.DateShipped.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.DateShipped.label}"
+                                                                               id="c3">
+                                                                        <af:outputText value="#{row.DateShipped}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.DateShipped.tooltip}"
+                                                                                       id="ot3">
+                                                                            <af:convertDateTime pattern="#{bindings.OrdersForCustomer.hints.DateShipped.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.SalesRepId.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.SalesRepId.label}"
+                                                                               id="c4">
+                                                                        <af:outputText value="#{row.SalesRepId}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.SalesRepId.tooltip}"
+                                                                                       id="ot4">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.OrdersForCustomer.hints.SalesRepId.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.Total.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.Total.label}"
+                                                                               id="c5">
+                                                                        <af:outputText value="#{row.Total}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.Total.tooltip}"
+                                                                                       id="ot5">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.OrdersForCustomer.hints.Total.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.PaymentTypeId.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.PaymentTypeId.label}"
+                                                                               id="c6">
+                                                                        <af:outputText value="#{row.PaymentTypeId}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.PaymentTypeId.tooltip}"
+                                                                                       id="ot6">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.OrdersForCustomer.hints.PaymentTypeId.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.PaymentOptionId.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.PaymentOptionId.label}"
+                                                                               id="c7">
+                                                                        <af:outputText value="#{row.PaymentOptionId}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.PaymentOptionId.tooltip}"
+                                                                                       id="ot7">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.OrdersForCustomer.hints.PaymentOptionId.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.OrdersForCustomer.hints.OrderFilled.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.OrdersForCustomer.hints.OrderFilled.label}"
+                                                                               id="c8">
+                                                                        <af:outputText value="#{row.OrderFilled}"
+                                                                                       shortDesc="#{bindings.OrdersForCustomer.hints.OrderFilled.tooltip}"
+                                                                                       id="ot8"/>
+                                                                    </af:column>
+                                                                </af:table>
                                                             </af:panelBox>
                                                         </f:facet>
                                                         <f:facet name="second">
                                                             <af:panelBox text="Order Details" id="pb2">
                                                                 <f:facet name="toolbar"/>
+                                                                <af:table value="#{bindings.ItemsForOrder.collectionModel}"
+                                                                          var="row"
+                                                                          rows="#{bindings.ItemsForOrder.rangeSize}"
+                                                                          emptyText="#{bindings.ItemsForOrder.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                          rowBandingInterval="0"
+                                                                          fetchSize="#{bindings.ItemsForOrder.rangeSize}"
+                                                                          id="t2" columnStretching="last">
+                                                                    <af:column sortProperty="#{bindings.ItemsForOrder.hints.OrdId.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.ItemsForOrder.hints.OrdId.label}"
+                                                                               id="c9">
+                                                                        <af:outputText value="#{row.OrdId}"
+                                                                                       shortDesc="#{bindings.ItemsForOrder.hints.OrdId.tooltip}"
+                                                                                       id="ot9">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ItemsForOrder.hints.OrdId.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.ItemsForOrder.hints.ItemId.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.ItemsForOrder.hints.ItemId.label}"
+                                                                               id="c10">
+                                                                        <af:outputText value="#{row.ItemId}"
+                                                                                       shortDesc="#{bindings.ItemsForOrder.hints.ItemId.tooltip}"
+                                                                                       id="ot10">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ItemsForOrder.hints.ItemId.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.ItemsForOrder.hints.ProductId.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.ItemsForOrder.hints.ProductId.label}"
+                                                                               id="c11">
+                                                                        <af:outputText value="#{row.ProductId}"
+                                                                                       shortDesc="#{bindings.ItemsForOrder.hints.ProductId.tooltip}"
+                                                                                       id="ot11">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ItemsForOrder.hints.ProductId.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.ItemsForOrder.hints.Price.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.ItemsForOrder.hints.Price.label}"
+                                                                               id="c12">
+                                                                        <af:outputText value="#{row.Price}"
+                                                                                       shortDesc="#{bindings.ItemsForOrder.hints.Price.tooltip}"
+                                                                                       id="ot12">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ItemsForOrder.hints.Price.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.ItemsForOrder.hints.Quantity.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.ItemsForOrder.hints.Quantity.label}"
+                                                                               id="c13">
+                                                                        <af:outputText value="#{row.Quantity}"
+                                                                                       shortDesc="#{bindings.ItemsForOrder.hints.Quantity.tooltip}"
+                                                                                       id="ot13">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ItemsForOrder.hints.Quantity.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                    <af:column sortProperty="#{bindings.ItemsForOrder.hints.QuantityShipped.name}"
+                                                                               sortable="true"
+                                                                               headerText="#{bindings.ItemsForOrder.hints.QuantityShipped.label}"
+                                                                               id="c14">
+                                                                        <af:outputText value="#{row.QuantityShipped}"
+                                                                                       shortDesc="#{bindings.ItemsForOrder.hints.QuantityShipped.tooltip}"
+                                                                                       id="ot14">
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ItemsForOrder.hints.QuantityShipped.format}"/>
+                                                                        </af:outputText>
+                                                                    </af:column>
+                                                                </af:table>
                                                             </af:panelBox>
                                                         </f:facet>
                                                     </af:panelSplitter>

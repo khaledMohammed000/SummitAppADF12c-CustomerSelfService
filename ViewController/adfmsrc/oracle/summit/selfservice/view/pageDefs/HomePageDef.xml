@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="HomePageDef"
+                Package="oracle.summit.selfservice.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Customers" RangeSize="25" DataControl="selfServiceAppModuleDataControl" id="CustomersIterator"/>
+    <iterator Binds="OrdersForCustomer" RangeSize="25" DataControl="selfServiceAppModuleDataControl"
+              id="OrdersForCustomerIterator"/>
+    <iterator Binds="ItemsForOrder" RangeSize="25" DataControl="selfServiceAppModuleDataControl"
+              id="ItemsForOrderIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CustomersIterator" id="Id">
+      <AttrNames>
+        <Item Value="Id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="Phone">
+      <AttrNames>
+        <Item Value="Phone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="Address">
+      <AttrNames>
+        <Item Value="Address"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="CountryId">
+      <AttrNames>
+        <Item Value="CountryId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomersIterator" id="ZipCode">
+      <AttrNames>
+        <Item Value="ZipCode"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="CustomersIterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="CustomersIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="CustomersIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="CustomersIterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="OrdersForCustomerIterator" id="OrdersForCustomer">
+      <nodeDefinition DefName="oracle.summit.selfservice.model.views.OrdersVO" Name="OrdersForCustomer0">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="DateOrdered"/>
+          <Item Value="DateShipped"/>
+          <Item Value="SalesRepId"/>
+          <Item Value="Total"/>
+          <Item Value="PaymentTypeId"/>
+          <Item Value="PaymentOptionId"/>
+          <Item Value="OrderFilled"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ItemsForOrderIterator" id="ItemsForOrder">
+      <nodeDefinition DefName="oracle.summit.selfservice.model.views.ItemsVO" Name="ItemsForOrder0">
+        <AttrNames>
+          <Item Value="OrdId"/>
+          <Item Value="ItemId"/>
+          <Item Value="ProductId"/>
+          <Item Value="Price"/>
+          <Item Value="Quantity"/>
+          <Item Value="QuantityShipped"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
