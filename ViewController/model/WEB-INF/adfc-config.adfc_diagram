@@ -69,9 +69,9 @@
       <property
          name="srcid">__20</property>
       <property
-         name="x">50.0</property>
+         name="x">352.0</property>
       <property
-         name="y">61.0</property>
+         name="y">215.44824</property>
    </WildcardControlFlowRule>
    <ControlFlowCase
       islink="true"
@@ -85,7 +85,7 @@
       <property
          name="fromsrcid">__20</property>
       <property
-         name="sdm:polyPoints">B43,46.5,106.59433,165.5,295.83887,T50</property>
+         name="sdm:polyPoints">L55,316.0,219.09766,165.5,295.83887,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -99,7 +99,7 @@
       <property
          name="fromsrcid">__20</property>
       <property
-         name="sdm:polyPoints">R55,86.0,64.5,127.5,85.643555,L50</property>
+         name="sdm:polyPoints">L45,316.0,212.09766,168.5,139.64355,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -113,7 +113,7 @@
       <property
          name="fromsrcid">__20</property>
       <property
-         name="sdm:polyPoints">R45,86.95184,57.5,498.5,83.83887,L50</property>
+         name="sdm:polyPoints">R45,388.0,212.09766,539.5,137.83887,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -127,6 +127,6 @@
       <property
          name="fromsrcid">__20</property>
       <property
-         name="sdm:polyPoints">B57,53.5,103.5,503.0,343.44238,L50</property>
+         name="sdm:polyPoints">R55,388.0,219.09766,503.0,343.44238,L50</property>
    </ControlFlowCase>
 </SDM>

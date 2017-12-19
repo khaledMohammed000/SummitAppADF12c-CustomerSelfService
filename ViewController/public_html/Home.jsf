@@ -9,13 +9,13 @@
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <!-- Header -->
                         <af:toolbar id="t3">
-                            <af:link text="Home" id="l1"/>
+                            <af:link text="Home" id="l1" action="goToHome"/>
                             <af:spacer width="5" height="5" id="s2"/>
-                            <af:link text="About" id="l2"/>
+                            <af:link text="About" id="l2" action="goToAbout"/>
                             <af:spacer width="5" height="5" id="s3"/>
-                            <af:link text="Contact" id="l3"/>
+                            <af:link text="Contact" id="l3" action="goToContact"/>
                             <af:spacer width="5" height="5" id="s1"/>
-                            <af:link text="Help" id="l4"/>
+                            <af:link text="Help" id="l4" action="goToHelp"/>
                         </af:toolbar>
                     </af:gridCell>
                 </af:gridRow>

@@ -5,12 +5,21 @@
         <af:form id="f1">
             <af:panelGridLayout id="pgl1">
                 <af:gridRow height="50px" id="gr1">
-                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <!-- Header -->
+                        <af:toolbar id="t3">
+                            <af:link text="Home" id="l1" action="goToHome"/>
+                            <af:spacer width="5" height="5" id="s2"/>
+                            <af:link text="About" id="l2" action="goToAbout"/>
+                            <af:spacer width="5" height="5" id="s3"/>
+                            <af:link text="Contact" id="l3" action="goToContact"/>
+                            <af:spacer width="5" height="5" id="s1"/>
+                            <af:link text="Help" id="l4" action="goToHelp"/>
+                        </af:toolbar>
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow height="100%" id="gr2">
-                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                         <af:decorativeBox theme="dark" id="db2">
                             <f:facet name="center">
                                 <af:decorativeBox theme="medium" id="db1">
