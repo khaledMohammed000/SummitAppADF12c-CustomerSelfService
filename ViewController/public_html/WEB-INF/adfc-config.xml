@@ -12,64 +12,23 @@
   <view id="Help">
     <page>/Help.jsf</page>
   </view>
-  <control-flow-rule id="__3">
-    <from-activity-id>Home</from-activity-id>
-    <control-flow-case id="__4">
-      <from-outcome>goToAbout</from-outcome>
-      <to-activity-id>About</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__7">
+  <control-flow-rule id="__20">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__26">
       <from-outcome>goToContact</from-outcome>
       <to-activity-id>Contact</to-activity-id>
     </control-flow-case>
-    <control-flow-case id="__10">
-      <from-outcome>goToHelp</from-outcome>
-      <to-activity-id>Help</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
-  <control-flow-rule id="__5">
-    <from-activity-id>About</from-activity-id>
-    <control-flow-case id="__6">
+    <control-flow-case id="__29">
       <from-outcome>goToHome</from-outcome>
       <to-activity-id>Home</to-activity-id>
     </control-flow-case>
-    <control-flow-case id="__15">
-      <from-outcome>goToHelp</from-outcome>
-      <to-activity-id>Help</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__18">
-      <from-outcome>goToContact</from-outcome>
-      <to-activity-id>Contact</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
-  <control-flow-rule id="__8">
-    <from-activity-id>Contact</from-activity-id>
-    <control-flow-case id="__9">
-      <from-outcome>goToHome</from-outcome>
-      <to-activity-id>Home</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__13">
-      <from-outcome>goToHelp</from-outcome>
-      <to-activity-id>Help</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__17">
+    <control-flow-case id="__31">
       <from-outcome>goToAbout</from-outcome>
       <to-activity-id>About</to-activity-id>
     </control-flow-case>
-  </control-flow-rule>
-  <control-flow-rule id="__11">
-    <from-activity-id>Help</from-activity-id>
-    <control-flow-case id="__12">
-      <from-outcome>goToHome</from-outcome>
-      <to-activity-id>Home</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__14">
-      <from-outcome>goToContact</from-outcome>
-      <to-activity-id>Contact</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__16">
-      <from-outcome>goToAbout</from-outcome>
-      <to-activity-id>About</to-activity-id>
+    <control-flow-case id="__32">
+      <from-outcome>goToHelp</from-outcome>
+      <to-activity-id>Help</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
 </adfc-config>

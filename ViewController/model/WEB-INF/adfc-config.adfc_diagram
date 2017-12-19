@@ -62,124 +62,71 @@
       <property
          name="exceptionHandler">false</property>
    </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule55">
+      <property
+         name="activityId">*</property>
+      <property
+         name="srcid">__20</property>
+      <property
+         name="x">50.0</property>
+      <property
+         name="y">61.0</property>
+   </WildcardControlFlowRule>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase7"
-      from="View2"
-      to="View4">
-      <property
-         name="fromOutcome">goToAbout</property>
-      <property
-         name="sdm:polyPoints">R38,213.38652,75.143555,498.5,80.33887,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="View4"
-      to="View2">
-      <property
-         name="fromOutcome">goToHome</property>
-      <property
-         name="sdm:polyPoints">L54,498.43625,87.33887,213.32361,82.143555,R46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase9"
-      from="View2"
+      id="ControlFlowCase61"
+      from="WildcardControlFlowRule55"
       to="View3">
+      <property
+         name="tosrcid">__26</property>
       <property
          name="fromOutcome">goToContact</property>
       <property
-         name="sdm:polyPoints">B44,165.0,139.64355,162.0,295.77164,T44</property>
+         name="fromsrcid">__20</property>
+      <property
+         name="sdm:polyPoints">B43,46.5,106.59433,165.5,295.83887,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase10"
-      from="View3"
+      id="ControlFlowCase64"
+      from="WildcardControlFlowRule55"
       to="View2">
+      <property
+         name="tosrcid">__29</property>
       <property
          name="fromOutcome">goToHome</property>
       <property
-         name="sdm:polyPoints">T56,169.0,295.83887,172.0,139.71077,B56</property>
+         name="fromsrcid">__20</property>
+      <property
+         name="sdm:polyPoints">R55,86.0,64.5,127.5,85.643555,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase11"
-      from="View2"
-      to="View5">
-      <property
-         name="fromOutcome">goToHelp</property>
-      <property
-         name="sdm:polyPoints">R54,212.02809,89.143555,503.0,332.94238,L38</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase12"
-      from="View5"
-      to="View2">
-      <property
-         name="fromOutcome">goToHome</property>
-      <property
-         name="sdm:polyPoints">L46,500.46347,339.94238,209.5,96.143555,R62</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View3"
-      to="View5">
-      <property
-         name="fromOutcome">goToHelp</property>
-      <property
-         name="sdm:polyPoints">R46,206.50713,346.33887,499.19586,346.94238,L54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase14"
-      from="View5"
-      to="View3">
-      <property
-         name="fromOutcome">goToContact</property>
-      <property
-         name="sdm:polyPoints">L62,499.18875,353.94238,206.5,353.33887,R54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase15"
-      from="View4"
-      to="View5">
-      <property
-         name="fromOutcome">goToHelp</property>
-      <property
-         name="sdm:polyPoints">B44,536.0,137.94273,540.5,289.44238,T44</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase16"
-      from="View5"
+      id="ControlFlowCase66"
+      from="WildcardControlFlowRule55"
       to="View4">
+      <property
+         name="tosrcid">__31</property>
       <property
          name="fromOutcome">goToAbout</property>
       <property
-         name="sdm:polyPoints">T56,547.5,289.33847,543.0,137.83887,B56</property>
+         name="fromsrcid">__20</property>
+      <property
+         name="sdm:polyPoints">R45,86.95184,57.5,498.5,83.83887,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase17"
-      from="View3"
-      to="View4">
+      id="ControlFlowCase67"
+      from="WildcardControlFlowRule55"
+      to="View5">
       <property
-         name="fromOutcome">goToAbout</property>
+         name="tosrcid">__32</property>
       <property
-         name="sdm:polyPoints">T61,172.5,295.83887,498.5,90.83887,L58</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase18"
-      from="View4"
-      to="View3">
+         name="fromOutcome">goToHelp</property>
       <property
-         name="fromOutcome">goToContact</property>
+         name="fromsrcid">__20</property>
       <property
-         name="sdm:polyPoints">L67,R7</property>
+         name="sdm:polyPoints">B57,53.5,103.5,503.0,343.44238,L50</property>
    </ControlFlowCase>
 </SDM>
