@@ -107,6 +107,13 @@
     AssociationOtherEnd="oracle.summit.selfservice.model.entities.SOrdCustomerIdFkAssoc.Ord"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PaymentType"
+    Association="oracle.summit.selfservice.model.entities.SOrdPaymentTypeFkAssoc"
+    AssociationEnd="oracle.summit.selfservice.model.entities.SOrdPaymentTypeFkAssoc.PaymentType"
+    AssociationOtherEnd="oracle.summit.selfservice.model.entities.SOrdPaymentTypeFkAssoc.Ord"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="SOrdCustomerIdNn">
     <DesignTime>

@@ -12,7 +12,7 @@
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../../../../Model.jpr"/>
     <Attr Name="_NamedConnection" Value="summit_adf"/>
-    <Attr Name="_appModuleNames0" Value="oracle.summit.selfservice.model.services.selfServiceAppModule"/>
+    <Attr Name="_appModuleNames0" Value="oracle.summit.selfservice.model.services.SelfServiceAppModule"/>
   </DesignTime>
   <Containee
     Name="entities"

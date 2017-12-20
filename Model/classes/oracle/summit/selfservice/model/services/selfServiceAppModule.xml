@@ -3,10 +3,16 @@
 <!---->
 <AppModule
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="selfServiceAppModule"
+  Name="SelfServiceAppModule"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="Countries"
+    ViewObjectName="oracle.summit.selfservice.model.views.CountriesVO"/>
+  <ViewUsage
+    Name="CreditRatings"
+    ViewObjectName="oracle.summit.selfservice.model.views.CreditRatingsVO"/>
   <ViewUsage
     Name="Customers"
     ViewObjectName="oracle.summit.selfservice.model.views.CustomersVO"/>
@@ -16,16 +22,46 @@
   <ViewUsage
     Name="ItemsForOrder"
     ViewObjectName="oracle.summit.selfservice.model.views.ItemsVO"/>
+  <ViewUsage
+    Name="PaymentOptionsForCustomer"
+    ViewObjectName="oracle.summit.selfservice.model.views.PaymentOptionsVO"/>
+  <ViewUsage
+    Name="Images"
+    ViewObjectName="oracle.summit.selfservice.model.views.ImagesVO"/>
+  <ViewUsage
+    Name="PaymentTypes"
+    ViewObjectName="oracle.summit.selfservice.model.views.PaymentTypesVO"/>
+  <ViewUsage
+    Name="ProductCategories"
+    ViewObjectName="oracle.summit.selfservice.model.views.ProductCategoriesVO"/>
+  <ViewUsage
+    Name="ProductsForCategory"
+    ViewObjectName="oracle.summit.selfservice.model.views.ProductsVO"/>
+  <ViewUsage
+    Name="Products"
+    ViewObjectName="oracle.summit.selfservice.model.views.ProductsVO"/>
   <ViewLinkUsage
     Name="OrdCustomerIdFkLink"
     ViewLinkObjectName="oracle.summit.selfservice.model.views.SOrdCustomerIdFkLink"
-    SrcViewUsageName="oracle.summit.selfservice.model.services.selfServiceAppModule.Customers"
-    DstViewUsageName="oracle.summit.selfservice.model.services.selfServiceAppModule.OrdersForCustomer"
+    SrcViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.Customers"
+    DstViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.OrdersForCustomer"
     Reversed="false"/>
   <ViewLinkUsage
     Name="ItemOrdIdFkLink"
     ViewLinkObjectName="oracle.summit.selfservice.model.views.SItemOrdIdFkLink"
-    SrcViewUsageName="oracle.summit.selfservice.model.services.selfServiceAppModule.OrdersForCustomer"
-    DstViewUsageName="oracle.summit.selfservice.model.services.selfServiceAppModule.ItemsForOrder"
+    SrcViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.OrdersForCustomer"
+    DstViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.ItemsForOrder"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="PmtOptionsCustIdFkLink"
+    ViewLinkObjectName="oracle.summit.selfservice.model.views.SPmtOptionsCustIdFkLink"
+    SrcViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.Customers"
+    DstViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.PaymentOptionsForCustomer"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ProductCategoryIdFkLink"
+    ViewLinkObjectName="oracle.summit.selfservice.model.views.SProductCategoryIdFkLink"
+    SrcViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.ProductCategories"
+    DstViewUsageName="oracle.summit.selfservice.model.services.SelfServiceAppModule.ProductsForCategory"
     Reversed="false"/>
 </AppModule>

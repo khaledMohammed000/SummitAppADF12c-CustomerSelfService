@@ -78,6 +78,13 @@
     AssociationOtherEnd="oracle.summit.selfservice.model.entities.SItemOrdIdFkAssoc.Item"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Product"
+    Association="oracle.summit.selfservice.model.entities.SItemProductIdFkAssoc"
+    AssociationEnd="oracle.summit.selfservice.model.entities.SItemProductIdFkAssoc.Product"
+    AssociationOtherEnd="oracle.summit.selfservice.model.entities.SItemProductIdFkAssoc.Item"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="SItemItemIdNn">
     <DesignTime>

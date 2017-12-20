@@ -134,10 +134,24 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
+    Name="CreditRating"
+    Association="oracle.summit.selfservice.model.entities.SCustomerCreditRatingFkAssoc"
+    AssociationEnd="oracle.summit.selfservice.model.entities.SCustomerCreditRatingFkAssoc.CreditRating"
+    AssociationOtherEnd="oracle.summit.selfservice.model.entities.SCustomerCreditRatingFkAssoc.Customer"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
     Name="Ord"
     Association="oracle.summit.selfservice.model.entities.SOrdCustomerIdFkAssoc"
     AssociationEnd="oracle.summit.selfservice.model.entities.SOrdCustomerIdFkAssoc.Ord"
     AssociationOtherEnd="oracle.summit.selfservice.model.entities.SOrdCustomerIdFkAssoc.Customer"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="PaymentOption"
+    Association="oracle.summit.selfservice.model.entities.SPmtOptionsCustIdFkAssoc"
+    AssociationEnd="oracle.summit.selfservice.model.entities.SPmtOptionsCustIdFkAssoc.PaymentOption"
+    AssociationOtherEnd="oracle.summit.selfservice.model.entities.SPmtOptionsCustIdFkAssoc.Customer"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

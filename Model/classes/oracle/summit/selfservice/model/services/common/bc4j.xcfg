@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <!---->
 <BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
-  <AppModuleConfigBag ApplicationName="oracle.summit.selfservice.model.services.selfServiceAppModule">
-    <AppModuleConfig name="selfServiceAppModuleLocal" jbo.project="oracle.summit.selfservice.model.Model"
-                     ApplicationName="oracle.summit.selfservice.model.services.selfServiceAppModule"
+  <AppModuleConfigBag ApplicationName="oracle.summit.selfservice.model.services.SelfServiceAppModule">
+    <AppModuleConfig name="SelfServiceAppModuleLocal" jbo.project="oracle.summit.selfservice.model.Model"
+                     ApplicationName="oracle.summit.selfservice.model.services.SelfServiceAppModule"
                      DeployPlatform="LOCAL">
       <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/summit_adfDS"/>
-      <Security AppModuleJndiName="oracle.summit.selfservice.model.services.selfServiceAppModule"/>
+      <Security AppModuleJndiName="oracle.summit.selfservice.model.services.SelfServiceAppModule"/>
     </AppModuleConfig>
-    <AppModuleConfig name="selfServiceAppModuleShared" jbo.project="oracle.summit.selfservice.model.Model"
-                     ApplicationName="oracle.summit.selfservice.model.services.selfServiceAppModule"
+    <AppModuleConfig name="SelfServiceAppModuleShared" jbo.project="oracle.summit.selfservice.model.Model"
+                     ApplicationName="oracle.summit.selfservice.model.services.SelfServiceAppModule"
                      DeployPlatform="LOCAL">
       <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
       <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/summit_adfDS"/>
-      <Security AppModuleJndiName="oracle.summit.selfservice.model.services.selfServiceAppModule"/>
+      <Security AppModuleJndiName="oracle.summit.selfservice.model.services.SelfServiceAppModule"/>
     </AppModuleConfig>
   </AppModuleConfigBag>
 </BC4JConfig>

@@ -89,4 +89,9 @@
     ViewLink="oracle.summit.selfservice.model.views.SOrdCustomerIdFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PaymentOptions"
+    ViewLink="oracle.summit.selfservice.model.views.SPmtOptionsCustIdFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>
