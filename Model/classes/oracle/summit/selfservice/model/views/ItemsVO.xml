@@ -30,7 +30,8 @@
     PrecisionRule="true"
     EntityAttrName="ItemId"
     EntityUsage="ItemEO"
-    AliasName="ITEM_ID"/>
+    AliasName="ITEM_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="ProductId"
     IsUnique="true"
@@ -57,4 +58,37 @@
     EntityAttrName="QuantityShipped"
     EntityUsage="ItemEO"
     AliasName="QUANTITY_SHIPPED"/>
+  <ViewAttribute
+    Name="ItemTotal"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="NUMERIC">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="ItemsVORow"/>
+    <Dependencies>
+      <Item
+        Value="Price"/>
+      <Item
+        Value="Quantity"/>
+    </Dependencies>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.views.ItemsVO.ItemTotal_LABEL"/>
+        <FMT_FORMATTER
+          ResId="oracle.summit.selfservice.model.views.ItemsVO.ItemTotal_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

@@ -1,0 +1,12 @@
+//Groovy Scripts for oracle.summit.selfservice.model.views.ItemsVO
+
+package oracle.summit.selfservice.model.views
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="ItemTotal")
+def ItemTotal_ExpressionScript_Expression()
+{
+(Quantity != null ? Quantity : 0) * (Price != null ? Price : 0)
+}
+
