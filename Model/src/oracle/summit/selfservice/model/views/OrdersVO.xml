@@ -43,29 +43,31 @@
     EntityUsage="OrdEO"
     AliasName="DATE_SHIPPED"/>
   <ViewAttribute
-    Name="SalesRepId"
-    PrecisionRule="true"
-    EntityAttrName="SalesRepId"
-    EntityUsage="OrdEO"
-    AliasName="SALES_REP_ID"/>
-  <ViewAttribute
     Name="Total"
     PrecisionRule="true"
     EntityAttrName="Total"
     EntityUsage="OrdEO"
-    AliasName="TOTAL"/>
+    AliasName="TOTAL">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.views.OrdersVO.Total_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PaymentTypeId"
     PrecisionRule="true"
     EntityAttrName="PaymentTypeId"
     EntityUsage="OrdEO"
-    AliasName="PAYMENT_TYPE_ID"/>
-  <ViewAttribute
-    Name="PaymentOptionId"
-    PrecisionRule="true"
-    EntityAttrName="PaymentOptionId"
-    EntityUsage="OrdEO"
-    AliasName="PAYMENT_OPTION_ID"/>
+    AliasName="PAYMENT_TYPE_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.views.OrdersVO.PaymentTypeId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="OrderFilled"
     PrecisionRule="true"
@@ -77,4 +79,8 @@
     ViewLink="oracle.summit.selfservice.model.views.SItemOrdIdFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

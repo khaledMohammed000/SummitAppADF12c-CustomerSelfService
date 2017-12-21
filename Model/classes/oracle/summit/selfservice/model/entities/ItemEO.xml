@@ -21,7 +21,14 @@
     Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="S_ITEM"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.OrdId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="ItemId"
     IsNotNull="true"
@@ -32,7 +39,14 @@
     Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="S_ITEM"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.ItemId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="ProductId"
     IsUnique="true"
@@ -43,7 +57,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_ITEM"/>
+    TableName="S_ITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.ProductId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Price"
     Precision="11"
@@ -52,7 +73,16 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="S_ITEM"/>
+    TableName="S_ITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.Price_LABEL"/>
+        <FMT_FORMATTER
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.Price_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Quantity"
     Precision="9"
@@ -61,7 +91,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_ITEM"/>
+    TableName="S_ITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.Quantity_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="QuantityShipped"
     Precision="9"
@@ -70,7 +107,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_ITEM"/>
+    TableName="S_ITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.ItemEO.QuantityShipped_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Ord"
     Association="oracle.summit.selfservice.model.entities.SItemOrdIdFkAssoc"
@@ -156,4 +200,8 @@
       <Item Value="oracle.summit.selfservice.model.entities.ItemEO.ProductId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

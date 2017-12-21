@@ -20,7 +20,14 @@
     Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="S_PAYMENT_OPTIONS"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.Id_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="CustomerId"
     IsUnique="true"
@@ -31,7 +38,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_PAYMENT_OPTIONS"/>
+    TableName="S_PAYMENT_OPTIONS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.CustomerId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="PaymentType"
     IsUnique="true"
@@ -45,6 +59,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.PaymentType_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="AccountNumber"
@@ -55,7 +75,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigInteger"
     ColumnType="NUMBER"
-    TableName="S_PAYMENT_OPTIONS"/>
+    TableName="S_PAYMENT_OPTIONS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.AccountNumber_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="CardType"
     Precision="30"
@@ -67,6 +94,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.CardType_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="ExpireDate"
@@ -74,7 +107,18 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="S_PAYMENT_OPTIONS"/>
+    TableName="S_PAYMENT_OPTIONS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.ExpireDate_LABEL"/>
+        <FMT_FORMAT
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.ExpireDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.ExpireDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="CheckDigits"
     Precision="4"
@@ -83,7 +127,14 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_PAYMENT_OPTIONS"/>
+    TableName="S_PAYMENT_OPTIONS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.CheckDigits_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="RoutingIdentifier"
     Precision="15"
@@ -95,6 +146,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.RoutingIdentifier_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="InstitutionName"
@@ -107,6 +164,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="120"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO.InstitutionName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Customer"
@@ -147,4 +210,8 @@
       <Item Value="oracle.summit.selfservice.model.entities.PaymentOptionEO.CustomerId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
