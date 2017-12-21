@@ -9,7 +9,7 @@
       </AppModuleConfig>
    </AppModuleConfigBag>
    <AppModuleConfigBag ApplicationName="oracle.summit.selfservice.model.services.SelfServiceAppModule">
-      <AppModuleConfig name="160769D6D75" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/summit_adfDS" ApplicationName="oracle.summit.selfservice.model.services.SelfServiceAppModule" jbo.project="oracle.summit.selfservice.model.Model" BC4JConfigName="SelfServiceAppModuleLocal" JDBCName="summit_adf" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+      <AppModuleConfig name="16076A892D3" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/summit_adfDS" ApplicationName="oracle.summit.selfservice.model.services.SelfServiceAppModule" jbo.project="oracle.summit.selfservice.model.Model" BC4JConfigName="SelfServiceAppModuleLocal" JDBCName="summit_adf" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
          <Database JDBCDataSource="java:comp/env/jdbc/summit_adfDS" jbo.SQLBuilder="Oracle" jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
          <Security AppModuleJndiName="oracle.summit.selfservice.model.services.SelfServiceAppModule"/>
          <Tester FullProxyInterfaceName="oracle.summit.selfservice.model.services.common.SelfServiceAppModule"/>

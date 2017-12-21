@@ -31,15 +31,18 @@
   </Attribute>
   <Attribute
     Name="ItemId"
-    IsNotNull="true"
     Precision="7"
     Scale="0"
     ColumnName="ITEM_ID"
     SQLType="NUMERIC"
-    Type="java.lang.Integer"
+    Type="oracle.jbo.domain.DBSequence"
     ColumnType="NUMBER"
     TableName="S_ITEM"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    IsUpdateable="while_insert"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    RetrievedOnInsert="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
