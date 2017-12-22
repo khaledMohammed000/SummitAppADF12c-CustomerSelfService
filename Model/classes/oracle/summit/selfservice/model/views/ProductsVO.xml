@@ -129,4 +129,8 @@
     ViewLink="oracle.summit.selfservice.model.views.SItemProductIdFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Name"/>
+  </SortCriteria>
 </ViewObject>

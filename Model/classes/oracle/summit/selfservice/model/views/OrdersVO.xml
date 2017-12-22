@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="Id"
     EntityUsage="OrdEO"
-    AliasName="ID"/>
+    AliasName="ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="CustomerId"
     IsNotNull="true"
@@ -83,4 +84,8 @@
     <PropertiesBundle
       PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
   </ResourceBundle>
+  <SortCriteria>
+    <Sort
+      Attribute="DateOrdered"/>
+  </SortCriteria>
 </ViewObject>

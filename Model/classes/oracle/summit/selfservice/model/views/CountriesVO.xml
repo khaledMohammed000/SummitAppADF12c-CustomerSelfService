@@ -42,4 +42,8 @@
     EntityAttrName="CountryCode"
     EntityUsage="CountryEO"
     AliasName="COUNTRY_CODE"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Country"/>
+  </SortCriteria>
 </ViewObject>

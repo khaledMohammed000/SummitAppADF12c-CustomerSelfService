@@ -40,4 +40,8 @@
     ViewLink="oracle.summit.selfservice.model.views.SProductCategoryIdFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Category"/>
+  </SortCriteria>
 </ViewObject>
