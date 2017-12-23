@@ -1,0 +1,18 @@
+//Groovy Scripts for oracle.summit.selfservice.model.entities.OrdEO
+
+package oracle.summit.selfservice.model.entities
+
+import oracle.jbo.script.annotation.MessageParameterExpression;
+
+@MessageParameterExpression(validatorName="ShipDateValidationRule", name="ResExpressions_dateShipped")
+def ShipDateValidationRule_ResExpressions_dateShipped_MessageParameterValues()
+{
+DateShipped
+}
+
+@MessageParameterExpression(validatorName="ShipDateValidationRule", name="ResExpressions_dateOrdered")
+def ShipDateValidationRule_ResExpressions_dateOrdered_MessageParameterValues()
+{
+DateOrdered
+}
+

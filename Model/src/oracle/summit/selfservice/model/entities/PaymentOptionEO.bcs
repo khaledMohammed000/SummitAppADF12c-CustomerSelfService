@@ -1,0 +1,19 @@
+//Groovy Scripts for oracle.summit.selfservice.model.entities.PaymentOptionEO
+
+package oracle.summit.selfservice.model.entities
+
+import oracle.jbo.script.annotation.MessageParameterExpression;
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@MessageParameterExpression(validatorName="ExpireDateValidationRule", name="ResExpressions_cardType")
+def ExpireDateValidationRule_ResExpressions_cardType_MessageParameterValues()
+{
+CardType
+}
+
+@ValidatorExpression(name="ExpireDateValidationRule")
+def ExpireDateValidationRule_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+

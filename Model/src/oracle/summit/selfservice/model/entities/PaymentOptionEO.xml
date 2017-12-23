@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="S_PAYMENT_OPTIONS"
   AliasName="PaymentOptionEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Id"
     IsNotNull="true"
@@ -210,6 +211,29 @@
       <Item Value="oracle.summit.selfservice.model.entities.PaymentOptionEO.CustomerId"/>
     </AttrArray>
   </Key>
+  <validation:CompareValidationBean
+    Name="ExpireDateValidationRule"
+    ResId="oracle.summit.selfservice.model.entities.PaymentOptionEO_Rule_0"
+    OnAttribute="ExpireDate"
+    OperandType="EXPR"
+    Inverse="false"
+    CompareType="GREATERTHAN">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="ExpireDate"/>
+    </validation:OnAttributes>
+    <validation:ResExpressions
+      Name="ExpireDateValidationRule_ResExprList">
+      <validation:Expression
+        Name="cardType"
+        trustMode="untrusted"
+        CodeSourceName="PaymentOptionEORow"/>
+    </validation:ResExpressions>
+    <validation:TransientExpression
+      Name="ValidationRuleScript"
+      trustMode="untrusted"
+      CodeSourceName="PaymentOptionEORow"/>
+  </validation:CompareValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>

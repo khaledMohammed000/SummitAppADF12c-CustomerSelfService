@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="S_ORD"
   AliasName="OrdEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Id"
     Precision="7"
@@ -259,6 +260,32 @@
       <Item Value="oracle.summit.selfservice.model.entities.OrdEO.SalesRepId"/>
     </AttrArray>
   </Key>
+  <validation:CompareValidationBean
+    Name="ShipDateValidationRule"
+    OnAttribute="DateShipped"
+    OperandType="ATTR"
+    Inverse="false"
+    CompareType="GREATERTHANEQUALTO"
+    CompareValue="DateOrdered"
+    ResId="oracle.summit.selfservice.model.entities.OrdEO_Rule_0">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="DateShipped"/>
+      <validation:Item
+        Value="DateOrdered"/>
+    </validation:OnAttributes>
+    <validation:ResExpressions
+      Name="ShipDateValidationRule_ResExprList">
+      <validation:Expression
+        Name="dateShipped"
+        trustMode="untrusted"
+        CodeSourceName="OrdEORow"/>
+      <validation:Expression
+        Name="dateOrdered"
+        trustMode="untrusted"
+        CodeSourceName="OrdEORow"/>
+    </validation:ResExpressions>
+  </validation:CompareValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
