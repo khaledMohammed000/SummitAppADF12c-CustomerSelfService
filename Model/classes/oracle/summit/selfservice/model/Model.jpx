@@ -32,6 +32,14 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="readonly"
+    PackageName="oracle.summit.selfservice.model.views.readonly"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="views"
     PackageName="oracle.summit.selfservice.model.views"
     ObjectType="JboPackage">

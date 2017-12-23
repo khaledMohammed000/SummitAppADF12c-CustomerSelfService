@@ -40,6 +40,9 @@
   <ViewUsage
     Name="Products"
     ViewObjectName="oracle.summit.selfservice.model.views.ProductsVO"/>
+  <ViewUsage
+    Name="CardTypes1"
+    ViewObjectName="oracle.summit.selfservice.model.views.readonly.CardTypesVO"/>
   <ViewLinkUsage
     Name="OrdCustomerIdFkLink"
     ViewLinkObjectName="oracle.summit.selfservice.model.views.SOrdCustomerIdFkLink"
