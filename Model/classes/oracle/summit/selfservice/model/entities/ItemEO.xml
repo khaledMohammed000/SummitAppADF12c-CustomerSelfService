@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="S_ITEM"
   AliasName="ItemEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="OrdId"
     IsUnique="true"
@@ -101,6 +102,14 @@
           ResId="oracle.summit.selfservice.model.entities.ItemEO.Quantity_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RangeValidationBean
+      Name="QuantityLimitValidationRule"
+      ResId="oracle.summit.selfservice.model.entities.ItemEO.Quantity_Rule_0"
+      OnAttribute="Quantity"
+      OperandType="LITERAL"
+      Inverse="false"
+      MinValue="0"
+      MaxValue="1500"/>
   </Attribute>
   <Attribute
     Name="QuantityShipped"
