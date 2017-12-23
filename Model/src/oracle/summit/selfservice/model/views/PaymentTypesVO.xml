@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="PaymentTypesVO1"
+    ViewObjectName="oracle.summit.selfservice.model.views.PaymentTypesVO"
+    RowLevelBinds="true"/>
   <EntityUsage
     Name="PaymentTypeEO"
     Entity="oracle.summit.selfservice.model.entities.PaymentTypeEO"/>

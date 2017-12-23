@@ -13,6 +13,27 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="CountriesVO1"
+    ViewObjectName="oracle.summit.selfservice.model.views.CountriesVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Countries"
+    ListVOName="CountriesVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CountryId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Country"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="CustomerEO"
     Entity="oracle.summit.selfservice.model.entities.CustomerEO"/>
@@ -59,7 +80,15 @@
     PrecisionRule="true"
     EntityAttrName="CountryId"
     EntityUsage="CustomerEO"
-    AliasName="COUNTRY_ID"/>
+    AliasName="COUNTRY_ID"
+    LOVName="LOV_Countries">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ZipCode"
     PrecisionRule="true"

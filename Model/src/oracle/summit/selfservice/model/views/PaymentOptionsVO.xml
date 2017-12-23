@@ -13,6 +13,48 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="CardTypesVO1"
+    ViewObjectName="oracle.summit.selfservice.model.views.readonly.CardTypesVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PaymentTypesVO1"
+    ViewObjectName="oracle.summit.selfservice.model.views.PaymentTypesVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_CardTypes"
+    ListVOName="CardTypesVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CardType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CardType"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Description"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PaymentTypes"
+    ListVOName="PaymentTypesVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PaymentType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="PaymentType"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PaymentType"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="PaymentOptionEO"
     Entity="oracle.summit.selfservice.model.entities.PaymentOptionEO"/>
@@ -38,7 +80,15 @@
     PrecisionRule="true"
     EntityAttrName="PaymentType"
     EntityUsage="PaymentOptionEO"
-    AliasName="PAYMENT_TYPE"/>
+    AliasName="PAYMENT_TYPE"
+    LOVName="LOV_PaymentTypes">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="radio"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="AccountNumber"
     IsNotNull="true"
@@ -51,7 +101,15 @@
     PrecisionRule="true"
     EntityAttrName="CardType"
     EntityUsage="PaymentOptionEO"
-    AliasName="CARD_TYPE"/>
+    AliasName="CARD_TYPE"
+    LOVName="LOV_CardTypes">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ExpireDate"
     PrecisionRule="true"
