@@ -16,6 +16,25 @@
   <EntityUsage
     Name="ItemEO"
     Entity="oracle.summit.selfservice.model.entities.ItemEO"/>
+  <EntityUsage
+    Name="ProductEO"
+    Entity="oracle.summit.selfservice.model.entities.ProductEO"
+    Association="oracle.summit.selfservice.model.entities.SItemProductIdFkAssoc"
+    AssociationEnd="oracle.summit.selfservice.model.entities.SItemProductIdFkAssoc.Product"
+    SourceUsage="oracle.summit.selfservice.model.views.ItemsVO.ItemEO"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="oracle.summit.selfservice.model.entities.ProductEO.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="oracle.summit.selfservice.model.entities.ItemEO.ProductId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="OrdId"
     IsUnique="true"
@@ -87,6 +106,25 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="ProductEO"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="ProductEO"
+    AliasName="ID"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="OrdId"/>
+    <Item Value="ItemId"/>
+  </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="oracle.summit.selfservice.model.ModelBundle"/>
